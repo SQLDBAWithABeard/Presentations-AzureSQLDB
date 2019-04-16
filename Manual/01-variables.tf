@@ -17,6 +17,14 @@ variable "SqlServerName" {
   description = "The name of the Azure SQL Server to be created or to have the database on - needs to be unique, lowercase between 3 and 24 characters including the prefix"
   default     = "jeremy"
 }
+variable "SQLServerAdminUser" {
+  description = "The name of the Azure SQL Server Admin user for the Azure SQL Database"
+  default     = "Beard"
+}
+variable "SQLServerAdminPassword" {
+  description = "The Azure SQL Database users password"
+  default     = "JonathanlovesR3ge%"
+}
 
 variable "SqlDatabaseName" {
   description = "The name of the Azure SQL database on - needs to be unique, lowercase between 3 and 24 characters including the prefix"
@@ -25,7 +33,7 @@ variable "SqlDatabaseName" {
 
 variable "Edition" {
   description = "The Edition of the Database - Basic, Standard, Premium, or DataWarehouse"
-  default     = "Basic"
+  default     = "Standard"
 }
 
 variable "ServiceObjective" {
