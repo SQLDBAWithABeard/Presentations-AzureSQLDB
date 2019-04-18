@@ -18,8 +18,27 @@ variable "SqlServerName" {
   default     = "__SqlServerName__"
 }
 
+variable "SQLServerAdminUser" {
+  description = "The name of the Azure SQL Server Admin user for the Azure SQL Database"
+  default     = "__SQLServerAdminUser__"
+}
+variable "SQLServerAdminPassword" {
+  description = "The Azure SQL Database users password"
+  default     = "__SQLServerAdminPassword__"
+}
 variable "SqlDatabaseName" {
   description = "The name of the Azure SQL database on - needs to be unique, lowercase between 3 and 24 characters including the prefix"
   default     = "__SqlDatabaseName__"
+}
+
+
+variable "Edition" {
+  description = "The Edition of the Database - Basic, Standard, Premium, or DataWarehouse"
+  default     = "__Edition__"
+}
+
+variable "ServiceObjective" {
+  description = "The Service Tier S0, S1, S2, S3, P1, P2, P4, P6, P11 and ElasticPool"
+  default     = "__ServiceObjective__"
 }
 
